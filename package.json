@@ -12,8 +12,7 @@
         "storejs",
         "secure",
         "localStorage",
-        "encryption",
-        "typescript"
+        "encryption"
     ],
     "repository": {
         "type": "git",
@@ -22,7 +21,7 @@
     "author": "Abdullah Al Fahim",
     "license": "MIT",
     "scripts": {
-        "build": "tsc && terser dist/encrypt-store.js -o dist/encrypt-store.min.js --compress --mangle",
+         "build": "tsc && terser dist/encrypt-store.js -o dist/encrypt-store.min.js --compress --mangle --comments '/^!/'",
         "prepare": "npm run build"
     },
     "devDependencies": {
