@@ -52,6 +52,9 @@ yarn add encrypt-storejs
 
 #### Setup Store
 
+ ``StoreName`` -> on which name you want create your store
+ 
+  ``secretPassword`` -> Generate One , Share here from your env or other secure place
 ```bash
 import { EncryptStoreJS } from "encrypt-storejs";
 
@@ -93,6 +96,11 @@ UHzDpCrDicOQd1XCssKMw5F0w60OLsK3WDvDqTnDgcOBBQ7Do8Kew4R/w6oGMcKzSznDpjTCjMOCRlzC
 ### Advanced Usage
 
 #### With Typescipt 
+
+ ``myStorageKey`` -> on which name you want create your store
+ 
+  ``mySecurePassword`` -> Generate One , Share here from your env or other secure place
+  
 ```base
 interface UserData {
     token: string;
@@ -103,6 +111,19 @@ interface UserData {
 }
 
 const secureStorage = EncryptStore.init<UserData>('myStorageKey', 'mySecurePassword');
+```
+### make more store if you want 
+```base 
+const userStorage = SecureLocalStorage.init<UserData>('userStorageKey', 'userPassword');
+userStorage.setLocalStorageObject({ name: 'Alice', age: 30 });
+const userData = userStorage.getLocalStorageObject();
+console.log(userData); // { name: 'Alice', age: 30 }
+
+// For ProductData
+const productStorage = SecureLocalStorage.init<ProductData>('productStorageKey', 'productPassword');
+productStorage.setLocalStorageObject({ productId: '123', productName: 'Widget', price: 9.99 });
+const productData = productStorage.getLocalStorageObject();
+console.log(productData); 
 ```
 ## More Example (Javascript)
 #### I have create a store.js File
