@@ -5,6 +5,11 @@
     "main": "dist/encrypt-store.js",
     "types": "dist/encrypt-store.d.ts",
     "keywords": [
+        "encrypt-storejs",
+        "store",
+        "local",
+        "storage",
+        "storejs",
         "secure",
         "localStorage",
         "encryption",
