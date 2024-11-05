@@ -9,8 +9,8 @@
     "jsdelivr": "dist/encrypt-store.min.js",
     "files": [
         "dist",
-        "README.md",
-        "LICENSE"
+        "LICENSE",
+        "README.md"
     ],
     "keywords": [
         "encrypt-storejs",
