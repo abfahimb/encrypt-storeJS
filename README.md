@@ -40,6 +40,7 @@ In today's digital landscape, protecting user data is paramount. Local storage i
 To get started, install the package using npm or yarn:
 
 #### Using NPM
+
 ```bash
 npm install encrypt-storejs
 ```
