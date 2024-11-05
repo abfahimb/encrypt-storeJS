@@ -31,12 +31,6 @@ jobs:
       - name: Install idoc Globally
         run: npm install idoc@1 -g
 
-      - name: Create Release
-        uses: ncipollo/release-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ steps.create_tag.outputs.version }}
-
       - name: Publish to npm
         run: npm publish --access public --provenance
         env:
