@@ -55,15 +55,15 @@ yarn add encrypt-storejs
 
  ``StoreName`` -> on which name you want create your store
  
-  ``secretPassword`` -> Generate One , Share here from your env or other secure place
+  ``private_key`` -> Secure Key, Share here from your env or other secure place
 ```bash
 import { EncryptStoreJS } from "encrypt-storejs"
 
-const secureStorage = EncryptStoreJS.init('storeName', 'secretPassword')
+const secureStorage = EncryptStoreJS.init('storeName', 'private_key')
 ```
 #### Set Value
 ```bash
-secureStorage.setEncryptStore({name: 'abdullah'})
+secureStorage.setEncryptStore({user_name: 'abdullah'})
 ```
 ##### [after each update/ insert data it will update] Your localStore will store data something like below (as encrypted it will not similar for you)
 ```bash
@@ -72,7 +72,7 @@ UHzDpCrDicOQd1XCssKMw5F0w60OLsK3WDvDqTnDgcOBBQ7Do8Kew4R/w6oGMcKzSznDpjTCjMOCRlzC
 
 #### Update Value
 ```bash
-  secureStorage.updateEncryptStore({name:'fahim'})
+  secureStorage.updateEncryptStore({user_name:'Ab'})
 ```
 
 #### Get Value (single)
@@ -86,7 +86,7 @@ UHzDpCrDicOQd1XCssKMw5F0w60OLsK3WDvDqTnDgcOBBQ7Do8Kew4R/w6oGMcKzSznDpjTCjMOCRlzC
 ```
 #### Remove Single Item (array)
 ```bash
-   secureStorage.deleteEncryptStore(['name'])
+   secureStorage.deleteEncryptStore(['user_name'])
 ```
 
 #### Clear Store
@@ -100,7 +100,7 @@ UHzDpCrDicOQd1XCssKMw5F0w60OLsK3WDvDqTnDgcOBBQ7Do8Kew4R/w6oGMcKzSznDpjTCjMOCRlzC
 
  ``myStorageKey`` -> on which name you want create your store
  
-  ``mySecurePassword`` -> Generate One , Share here from your env or other secure place
+  ``private_key`` -> Generate One , Share here from your env or other secure place
   
 ```base
 interface UserData {
@@ -111,7 +111,7 @@ interface UserData {
     }
 }
 
-const secureStorage = EncryptStore.init<UserData>('myStorageKey', 'mySecurePassword')
+const secureStorage = EncryptStore.init<UserData>('myStorageKey', 'private_key')
 ```
 ### make more store if you want 
 ```base 
@@ -131,7 +131,7 @@ console.log(productData)
 ```base 
 import { EncryptStoreJS } from "encrypt-storejs"
 
-const secureStorage = EncryptStoreJS.init('storeName', 'secretPassword')
+const secureStorage = EncryptStoreJS.init('storeName', 'private_key')
 
 export function setObject(value) {
   secureStorage.setEncryptStore(value)
@@ -161,9 +161,9 @@ export function clearObject() {
 #### what ever place needed just import that function 
 ```base
     const updateAb = () => {
-        updateObject({name:'abdullah al fahim'})
+        updateObject({user_name:'abdullah al fahim'})
 
-        const data = getObject('name')
+        const data = getObject('user_name')
         console.log(data)
     }
 ```    
@@ -178,7 +178,7 @@ interface UserData {
   info?: string
   email?: string
 }
-const secureStorage = EncryptStoreJS.init<UserData>('myStorageKey', 'secretPassword')
+const secureStorage = EncryptStoreJS.init<UserData>('myStorageKey', 'private_key')
 
 export function setObject<T extends UserData>(value: T): void {
   secureStorage.setEncryptStore(value)
@@ -210,9 +210,9 @@ export function clearObject(): void {
 #### what ever place needed just import that function (for typescript) same
 ```base
     const updateAb = () => {
-        updateObject({name:'abdullah al fahim'})
+        updateObject({user_name:'abdullah al fahim'})
 
-        const data = getObject('name')
+        const data = getObject('user_name')
         console.log(data)
     }
 ```   

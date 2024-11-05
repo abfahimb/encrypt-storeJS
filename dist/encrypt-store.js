@@ -1,5 +1,5 @@
 "use strict";
-/*! encrypt-storejs v2.1.1 | MIT (c) 2024 Abdullah Al Fahim | https://github.com/abfahimb/encrypt-storeJS */
+/*! encrypt-storejs v2.1.3 | MIT (c) 2024 Abdullah Al Fahim | https://github.com/abfahimb/encrypt-storeJS */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EncryptStoreJS = void 0;
 class EncryptStoreJS {
