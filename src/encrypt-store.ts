@@ -15,11 +15,7 @@ export class EncryptStoreJS<T extends AppData> {
   }
 
   public static init<T extends AppData>(storageKey: string, password: string): EncryptStoreJS<T> {
-      if (!EncryptStoreJS.instance) {
         EncryptStoreJS.instance = new EncryptStoreJS<T>(storageKey, password);
-      } else {
-          console.warn('SecureLocalStorage has already been initialized. Please create a new instance for different settings.');
-      }
       return EncryptStoreJS.instance as EncryptStoreJS<T>;
   }
 

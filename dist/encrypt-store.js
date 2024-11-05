@@ -8,12 +8,7 @@ class EncryptStoreJS {
         this.key = password;
     }
     static init(storageKey, password) {
-        if (!EncryptStoreJS.instance) {
-            EncryptStoreJS.instance = new EncryptStoreJS(storageKey, password);
-        }
-        else {
-            console.warn('SecureLocalStorage has already been initialized. Please create a new instance for different settings.');
-        }
+        EncryptStoreJS.instance = new EncryptStoreJS(storageKey, password);
         return EncryptStoreJS.instance;
     }
     generateRandomSalt(length = 16) {
