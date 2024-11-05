@@ -18,8 +18,14 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
+      - name: Clear npm Cache (Optional)
+        run: npm cache clean --force
+
       - name: Install Dependencies
         run: npm install
+        env:
+          # Set a custom cache location if needed
+          npm_config_cache: ~/.npm-cache
 
       - name: Clean Previous Build
         run: rm -rf dist/
