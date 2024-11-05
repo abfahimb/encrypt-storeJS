@@ -16,20 +16,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Clean Previous Build
+        run: rm -rf dist/
 
       - name: Build Package
         run: npm run build
 
       - name: Publish to npm
-        uses: actions/upload-artifact@v3
-        with:
-          name: npm-package
-          path: dist/
-
-      - name: Create npm Release
         run: |
           npm publish --access public
           echo "## npm Package Published" >> $GITHUB_STEP_SUMMARY
