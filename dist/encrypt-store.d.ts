@@ -1,4 +1,4 @@
-/*! encrypt-storejs v1.0.5 | MIT (c) 2024 Abdullah Al Fahim | https://github.com/abfahimb/encrypt-storeJS */
+/*! encrypt-storejs v2.1.1 | MIT (c) 2024 Abdullah Al Fahim | https://github.com/abfahimb/encrypt-storeJS */
 export interface AppData {
     [key: string]: any;
 }
