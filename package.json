@@ -1,6 +1,6 @@
 {
     "name": "encrypt-storejs",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "lightweight, easy-to-use JavaScript library for securely storing data in the browser's local storage. By employing advanced encryption techniques, encrypt-storejs ensures that sensitive information is safely stored and protected against unauthorized access",
     "main": "dist/encrypt-store.js",
     "types": "dist/encrypt-store.d.ts",
